@@ -94,7 +94,7 @@ class AI
       row.each do |e|
         next unless e == current_position
 
-        if row[6].to_i - row[3].to_i == 2 && row[4] == 'O' && row[2].to_f != 0.2
+        if row[6].to_i - row[3].to_i == 2 && row[2].to_f != 0.2
           unacceptable_moves_array << row[0]
         # Find moves that inevitably lead to a fork:
         elsif fork_danger_1 && row[3].to_i == 3 && row[0].to_i.odd?
