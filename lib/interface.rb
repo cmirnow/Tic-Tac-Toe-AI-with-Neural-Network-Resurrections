@@ -59,7 +59,6 @@ class Interface
   # Find a move number of a possible fork:
   def move_number_fork
     current = @game.current_player
-    # @count_spots.last if current == :O && (@game.fork?.size > 1)
     @count_spots.last if @game.fork?.size > 1
   end
 

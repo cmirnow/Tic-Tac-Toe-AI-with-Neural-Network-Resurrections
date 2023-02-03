@@ -75,9 +75,7 @@ class AI
         end
         next unless x_data.empty?
 
-        # 'unless' instead of 'if' fix
-        # if arrays[1].include?(row[0])
-        unless arrays[1].include?(row[0])
+        unless arrays[0].include?(row[0])
           x_data.push([row[0].to_i])
           y_data.push([0.3])
         end
@@ -99,11 +97,9 @@ class AI
         if row[6].to_i - row[3].to_i == 2 && row[2].to_f != 0.2
           unacceptable_moves_array << row[0]
         # Find moves that inevitably lead to a fork:
-        # elsif fork_danger_1 && row[3].to_i == 3 && row[0].to_i.odd?
-        elsif fork_danger_1 && row[3].to_i == 2 && row[0].to_i.odd?
+        elsif fork_danger_1 && row[3].to_i == (3 if @player1 == 'Human' || 2) && row[0].to_i.odd?
           unacceptable_moves_array << row[0]
-        # elsif (fork_danger_2 || fork_danger_3) && row[3].to_i == 3 && row[0].to_i.even?
-        elsif (fork_danger_2 || fork_danger_3) && row[3].to_i == 2 && row[0].to_i.even?
+        elsif (fork_danger_2 || fork_danger_3) && row[3].to_i == (3 if @player1 == 'Human' || 2) && row[0].to_i.even?
           unacceptable_moves_array << row[0]
         end
         next if row[5].nil?
