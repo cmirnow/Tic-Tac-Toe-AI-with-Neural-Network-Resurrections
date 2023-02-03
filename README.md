@@ -10,7 +10,7 @@ How to start playing:
 ```bash
 gem install csv ruby-fann progress_bar tty-pie
 git clone https://github.com/cmirnow/Tic-Tac-Toe-AI-with-Neural-Network-Resurrections.git
-cd https://github.com/cmirnow/Tic-Tac-Toe-AI-with-Neural-Network-Resurrections
+cd Tic-Tac-Toe-AI-with-Neural-Network-Resurrections
 ruby start.rb
 ```
 
