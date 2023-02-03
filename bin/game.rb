@@ -15,8 +15,10 @@ class Interface
 
   def start
     players_arr = %w[Human AI]
-    @player1 = players_arr.delete(players_arr.sample)
-    @player2 = players_arr.join
+    # @player1 = players_arr.delete(players_arr.sample)
+    # @player2 = players_arr.join
+    @player1 = players_arr[1]
+    @player2 = players_arr[0]
     puts ' '
     puts '--------------------------------'
     puts 'New game! Press "q" and Enter to finish.'

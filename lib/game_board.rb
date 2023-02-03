@@ -86,7 +86,8 @@ class GameBoard
   end
 
   def place_x?(index)
-    @board[index] == :X
+    # @board[index] == :X
+    @board[index] == :O
   end
 
   def counter
