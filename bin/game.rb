@@ -15,12 +15,12 @@ class Interface
 
   def start
     players_arr = %w[Human AI]
-    @player1 = players_arr.delete(players_arr.sample)
+    @player1 = players_arr.shuffle!.pop
     @player2 = players_arr.join
     puts ' '
     puts '--------------------------------'
-    puts 'New game! Press "q" and Enter to finish.'
-    puts "'Player X' is #{@player1} & 'Player O' is #{@player2}"
+    puts 'New game! Or press "q" and Enter to finish.'
+    puts "'Player X' is #{@player1} & 'Player O' is #{@player2}."
     display_board
   end
 
