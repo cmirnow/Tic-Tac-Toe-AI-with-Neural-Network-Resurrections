@@ -57,10 +57,11 @@ class AI
         next if arrays[0].include?(row[0])
 
         unless arrays[1].include?(row[0]) && !arrays[2].include?(row[0])
-          if row[6].to_i - row[3].to_i == 1
+          case row[6].to_i - row[3].to_i
+          when 1
             x_data.push([row[0].to_i])
             y_data.push([1])
-          elsif row[6].to_i - row[3].to_i == 3
+          when 3
             if arrays[2].include?(row[0])
               x_data.push([row[0].to_i])
               y_data.push([0.9])
@@ -117,18 +118,18 @@ class AI
     [[a, 'Unacceptable moves: '],
      [b, 'List of moves leading to fork: '],
      [c, 'Attack moves: ']].each do |i|
-      print i[1] + i[0].uniq.to_s + "\n" if i[0].any?
+      print "#{i[1]}#{i[0].uniq}\n" if i[0].any?
     end
     print "\n"
   end
 
   def self.print_info_1(a, b, c)
-    print "\n x_data=" + a.to_s + "\n"
-    print "\n FANN results: " + b.to_s + "\n"
+    print "\n x_data=#{a}\n"
+    print "\n FANN results: #{b}\n"
     puts ''
     chart(a, b)
     puts ''
-    puts "\n AI MOVE: " + c.to_s
+    puts "\n AI MOVE: #{c}"
   end
 
   def self.print_info_2
