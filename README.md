@@ -22,3 +22,5 @@ ruby start.rb
 ```
 
 <img src="https://github.com/cmirnow/Tic-Tac-Toe-AI-with-Neural-Network-Resurrections/blob/master/images/tictactoe.gif" alt="Tic Tac Toe AI with Neural Network. The Resurrections." width="100%"/>
+
+[Article on Medium.com](https://medium.com/@aleksejsmir/build-your-own-tic-tac-toe-robot-ded684a79ad1)
