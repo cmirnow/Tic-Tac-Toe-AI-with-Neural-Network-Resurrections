@@ -78,6 +78,7 @@ class Interface
       if @game.who_has_won? == :X && @player1 == 'Human' ||
          @game.who_has_won? == :O && @player2 == 'Human'
         puts 'Congratulations, Human! You Won.'
+        AI.recreate_games_log
       else
         puts 'Congratulations, AI! You Won.'
       end

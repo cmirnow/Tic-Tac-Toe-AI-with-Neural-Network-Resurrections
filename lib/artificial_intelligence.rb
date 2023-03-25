@@ -36,12 +36,19 @@ class AI
       end
     rescue StandardError
       []
-      print_info_2
-      Starting.beginning_of_game
+      # Starting.beginning_of_game
+      recreate_games_log
     end
     result = data[0][fann_results_array.index(fann_results_array.max)]
     print_info_1(data[0], fann_results_array, result[0])
     result[0]
+  end
+
+  def self.recreate_games_log
+    print_info_2
+    File.delete('ss.csv')
+    require_relative '../bin/training'
+    exit
   end
 
   def self.nn_data(board, fork_danger_1, fork_danger_2, fork_danger_3, array_of_games)
@@ -133,7 +140,7 @@ class AI
   end
 
   def self.print_info_2
-    puts "\n AI sees no way to continue the game. :( Try deleting ss.csv and run the program again."
+    puts 'Sorry. TimeOut. AI will rebuild the game log now. Please wait...'
   end
 
   def self.progress
