@@ -55,5 +55,4 @@ resulting_array.flatten(1).zip(total_number_moves).each do |i|
 end
 # Create a csv file:
 File.write('ss.csv', tmp.map(&:to_csv).join)
-puts 'Done.'
-puts 'You can start playing.'
+puts "\nDone. You can start playing."
