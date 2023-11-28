@@ -47,7 +47,7 @@ class AI
   def self.recreate_games_log
     print_info_2
     File.delete('ss.csv')
-    require_relative '../bin/training'
+    require_relative './training'
     exit
   end
 
