@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'csv'
-require_relative '../lib/interface'
+require_relative './interface'
 
 total_number_moves = []
 resulting_array = []

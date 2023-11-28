@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
+gem 'ruby-fann', '=1.3.2'
 require 'ruby-fann'
 require 'csv'
 require 'progress_bar'
 require 'tty-pie'
-require_relative '../lib/game_board'
-require_relative '../lib/progress_bar'
-require_relative '../lib/artificial_intelligence'
+require_relative './game_board'
+require_relative './progress_bar'
+require_relative './artificial_intelligence'
 
 class Interface
   def initialize

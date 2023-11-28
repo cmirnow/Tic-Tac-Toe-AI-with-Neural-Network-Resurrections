@@ -15,7 +15,7 @@ You'll need Ruby.
 How to start playing:
 
 ```bash
-gem install csv ruby-fann progress_bar tty-pie
+gem install progress_bar tty-pie csv ruby-fann:1.3.2
 git clone https://github.com/cmirnow/Tic-Tac-Toe-AI-with-Neural-Network-Resurrections.git
 cd Tic-Tac-Toe-AI-with-Neural-Network-Resurrections
 ruby start.rb
